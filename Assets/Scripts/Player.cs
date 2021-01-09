@@ -35,7 +35,8 @@ public class Player : MonoBehaviour
 		float horizontalInput = Input.GetAxis("Horizontal")*acceleration;
 		Vector2 Vec = new Vector2(horizontalInput,0.0f);
 		rb.AddForce(Vec);
-		rb.velocity = Vector2.ClampMagnitude(rb.velocity,maxVelocity);
+		float xvel = Mathf.Clamp(rb.velocity.x,-maxVelocity,maxVelocity);
+		rb.velocity = new Vector2(xvel,rb.velocity.y);
 		if (justdied)
 		{
 			justdied = false;
