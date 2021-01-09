@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
 		{
 			justdied = false;
 			rb.velocity = new Vector2();
-			rb.angularVelocity = 0;
+
 		}
 	}
 	
