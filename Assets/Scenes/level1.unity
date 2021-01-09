@@ -2456,6 +2456,16 @@ PrefabInstance:
       propertyPath: speed
       value: 7.5
       objectReference: {fileID: 0}
+    - target: {fileID: -1610356179701088057, guid: 4723a20c1e990af42a30714fde555498,
+        type: 3}
+      propertyPath: acceleration
+      value: 12.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -1610356179701088057, guid: 4723a20c1e990af42a30714fde555498,
+        type: 3}
+      propertyPath: maxVelocity
+      value: 7.5
+      objectReference: {fileID: 0}
     - target: {fileID: 445685946600698096, guid: 4723a20c1e990af42a30714fde555498,
         type: 3}
       propertyPath: m_LinearDrag

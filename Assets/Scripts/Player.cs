@@ -7,10 +7,11 @@ public class Player : MonoBehaviour
 	private GameObject scoretext;
 	private bool grounded = false;
 	public float JumpPower;
-	public float speed;
+	public float acceleration;
 	private Rigidbody2D rb;
 	private Vector2 StartPosition;
 	private bool justdied = false;
+	public float maxVelocity;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,9 +32,10 @@ public class Player : MonoBehaviour
 	
 	void FixedUpdate() 
 	{
-		float horizontalInput = Input.GetAxis("Horizontal")*speed;
+		float horizontalInput = Input.GetAxis("Horizontal")*acceleration;
 		Vector2 Vec = new Vector2(horizontalInput,0.0f);
 		rb.AddForce(Vec);
+		rb.velocity = Vector2.ClampMagnitude(rb.velocity,maxVelocity);
 		if (justdied)
 		{
 			justdied = false;
