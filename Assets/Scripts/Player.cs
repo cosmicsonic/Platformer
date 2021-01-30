@@ -12,12 +12,15 @@ public class Player : MonoBehaviour
 	private Vector2 StartPosition;
 	private bool justdied = false;
 	public float maxVelocity;
+	private GameObject failtext;
     // Start is called before the first frame update
     void Start()
     {
 		scoretext = GameObject.Find("Score Text");
         rb = GetComponent<Rigidbody2D>();
 		StartPosition = transform.position;
+		failtext = GameObject.Find("Fails");
+		Debug.Log(failtext);
 	}
 
     // Update is called once per frame
@@ -91,14 +94,10 @@ public class Player : MonoBehaviour
 	
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.gameObject.CompareTag("Enemy") || other.gameObject.tag == "Projectile")
+		if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Projectile") || other.gameObject.CompareTag("Void") || other.gameObject.CompareTag("Hazard"))
 		{
 			die();
 			
-		}
-		else if (other.gameObject.CompareTag("Void"))
-		{
-			die();
 		}
 	}
 	void die()
@@ -107,5 +106,7 @@ public class Player : MonoBehaviour
 		rb.velocity = new Vector2();
 		rb.angularVelocity = 0;
 		justdied = true;
+		failtext.GetComponent<Fails>().fails++;
+		
 	}
 }

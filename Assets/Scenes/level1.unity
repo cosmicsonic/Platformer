@@ -2145,6 +2145,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 824749755819198163, guid: 7ddc4237ebb802345b9f13ec5b0f96b9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hazard
+      objectReference: {fileID: 0}
     - target: {fileID: 5371075500173327669, guid: 7ddc4237ebb802345b9f13ec5b0f96b9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2449,7 +2454,7 @@ PrefabInstance:
     - target: {fileID: -1610356179701088057, guid: 4723a20c1e990af42a30714fde555498,
         type: 3}
       propertyPath: JumpPower
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -1610356179701088057, guid: 4723a20c1e990af42a30714fde555498,
         type: 3}
@@ -2459,7 +2464,7 @@ PrefabInstance:
     - target: {fileID: -1610356179701088057, guid: 4723a20c1e990af42a30714fde555498,
         type: 3}
       propertyPath: acceleration
-      value: 12.5
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: -1610356179701088057, guid: 4723a20c1e990af42a30714fde555498,
         type: 3}
@@ -2654,6 +2659,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5728929977738956643, guid: 38522571c1b560549b7bafcfd634db16,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -274.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5728929977738956643, guid: 38522571c1b560549b7bafcfd634db16,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -128
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38522571c1b560549b7bafcfd634db16, type: 3}
